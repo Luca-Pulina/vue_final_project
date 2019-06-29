@@ -9,7 +9,7 @@
         <ul class="navbar-nav mr-auto">
             <router-link to="/portfolio" activeClass="active" tag="li" class ="nav-item"><a class="nav-link"> Portfolio</a></router-link>
             <router-link to="/stocks" activeClass="active" tag="li"><a class="nav-link">Stocks</a></router-link>
-      
+       
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle"
                 href="#" id="navbarDropdown"
@@ -25,6 +25,17 @@
             </div>
         </li>
         </ul>
+         <strong>Funds: {{funds}}</strong>
     </div>
     </nav>
 </template>
+
+<script>
+export default {
+    computed: {
+        funds(){
+            return this.$store.getters.funds
+        }
+    },
+}
+</script>
